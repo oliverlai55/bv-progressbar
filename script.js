@@ -43,6 +43,8 @@ $(document).ready(function() {
   // animateWidth('200px', 2500)
   // animateWidth('300px', 1000)
   // document.getElementById('progressbar').innerHTML = $('#progressbar').width().toString()
+
+
 })
 
 // http://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_progressbar_labels_js2
