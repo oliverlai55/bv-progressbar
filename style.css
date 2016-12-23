@@ -5,7 +5,26 @@
 }
 
 #progressbar {
-  width: 0%;
   background-color: pink;
   height: 10px;
+  animation: increase-width 5.5s;
+  animation-timing-function: linear;
+
+}
+
+@keyframes increase-width {
+  0% {
+    width: 0%;
+
+  }
+  33% {
+    width: 23%;
+
+  }
+  66% {
+    width: 55%;
+  }
+  100% {
+    width: 100%;
+  }
 }
