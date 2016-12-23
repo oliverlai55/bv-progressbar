@@ -1,0 +1,11 @@
+.progressbar-wrapper {
+  width: 500px;
+
+
+}
+
+#progressbar {
+  width: 0%;
+  background-color: pink;
+  height: 10px;
+}
