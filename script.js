@@ -17,6 +17,7 @@ $(document).ready(function() {
 
         if (barWidth == 500) {
           clearInterval(setPercentage);
+          //run function to get search bar back, take progressbar display none
         }
     }
   }());
