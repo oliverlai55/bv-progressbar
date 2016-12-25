@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   var $progressBar = $('#progressbar')
-
+  var $percentText = $('#percent-text')
   function initPercentage() {
     var setPercentage = setInterval(incPer, 10);
 
@@ -9,7 +9,7 @@ $(document).ready(function() {
         var barWidth = $progressBar.width()
         var widthPercent = Math.round((barWidth / 500) * 100) + '%'
         console.log(widthPercent);
-        $('#demo').text(widthPercent)
+        $percentText.text(widthPercent)
         if (barWidth == 500) {
           clearInterval(setPercentage);
         }
