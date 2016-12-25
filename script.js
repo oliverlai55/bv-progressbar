@@ -1,20 +1,22 @@
 $(document).ready(function() {
 
-  var $progressBar = $('#progressbar')
-  var $percentText = $('#percent-text')
-  function initPercentage() {
-    var setPercentage = setInterval(incPer, 10);
 
-    function incPer() {
+
+  function initPercentage() {
+    var $progressBar = $('#progressbar')
+    var $percentText = $('#percent-text')
+    var setPercentage = setInterval(addPercentageText, 10);
+
+    function addPercentageText() {
         var barWidth = $progressBar.width()
         var widthPercent = Math.round((barWidth / 500) * 100) + '%'
-        console.log(widthPercent);
+
         $percentText.text(widthPercent)
+
         if (barWidth == 500) {
           clearInterval(setPercentage);
         }
     }
-
   }
 
   initPercentage()

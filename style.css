@@ -5,8 +5,14 @@
 }
 
 #progressbar {
-  background-color: pink;
-  height: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    #93bf66,
+    #93bf66 10px,
+    #81b44c 10px,
+    #81b44c 20px
+  );
+  height: 30px;
   animation: increase-width 5.5s;
   animation-timing-function: linear;
 
@@ -27,4 +33,8 @@
   100% {
     width: 100%;
   }
+}
+
+#percent-text {
+  color: #fff;
 }
