@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+//make sure the width of progress bar will be taken in dynamically
+// in case for mobile the progress wrapper width changes
 
 
   function initPercentage() {
