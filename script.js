@@ -4,7 +4,7 @@ $(document).ready(function() {
 // in case for mobile the progress wrapper width changes
 
 
-  function initPercentage() {
+  (function initPercentage() {
     var $progressBar = $('#progressbar')
     var $percentText = $('#percent-text')
     var setPercentage = setInterval(addPercentageText, 10);
@@ -19,9 +19,9 @@ $(document).ready(function() {
           clearInterval(setPercentage);
         }
     }
-  }
+  }());
 
-  initPercentage()
+  // initPercentage()
   // function startProgress() {
   //
   //   console.log($('#progressbar').width())
