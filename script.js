@@ -1,23 +1,25 @@
 $(document).ready(function() {
-
-//make sure the width of progress bar will be taken in dynamically
-// in case for mobile the progress wrapper width changes
-
-
+  
   (function initPercentage() {
+    var $progressbarWrap = $('.progressbar-wrapper').width()
     var $progressBar = $('#progressbar')
     var $percentText = $('#percent-text')
     var setPercentage = setInterval(addPercentageText, 10);
+    var $progressbarContent = $('.progressbar-content');
+    var $searchbarContent = $('.searchbar-content');
 
     function addPercentageText() {
         var barWidth = $progressBar.width()
-        var widthPercent = Math.round((barWidth / 500) * 100) + '%'
+        var widthPercent = (100 - Math.round((barWidth / $progressbarWrap) * 100)) + '%'
 
         $percentText.text(widthPercent)
 
-        if (barWidth == 500) {
+        if (barWidth == $progressbarWrap) {
           clearInterval(setPercentage);
           //run function to get search bar back, take progressbar display none
+
+          $progressbarContent.addClass('hidden');
+          $searchbarContent.fadeIn(1500).removeClass('hidden');
         }
     }
   }());
