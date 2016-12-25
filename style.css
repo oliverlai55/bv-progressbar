@@ -37,4 +37,7 @@
 
 #percent-text {
   color: #fff;
+  position: relative;
+  top: 6px;
+  left: 6px;
 }
